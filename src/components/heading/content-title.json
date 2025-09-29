@@ -10,6 +10,24 @@
     },
     "title_2": {
       "type": "string"
+    },
+    "title_3": {
+      "type": "string"
+    },
+    "title_4": {
+      "type": "string"
+    },
+    "title_5": {
+      "type": "string"
+    },
+    "title_6": {
+      "type": "string"
+    },
+    "title_7": {
+      "type": "string"
+    },
+    "title_8": {
+      "type": "string"
     }
   },
   "config": {}
