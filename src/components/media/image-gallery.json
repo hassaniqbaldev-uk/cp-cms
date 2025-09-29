@@ -79,6 +79,11 @@
       "type": "media",
       "multiple": false,
       "allowedTypes": ["images", "files", "videos", "audios"]
+    },
+    "image_column_14": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "files", "videos", "audios"]
     }
   },
   "config": {}
