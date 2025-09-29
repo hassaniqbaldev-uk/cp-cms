@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_grid_grid_column_4s",
+  "info": {
+    "displayName": "grid_column_4"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
