@@ -19,6 +19,11 @@
       "type": "component",
       "component": "grid.grid-column-3",
       "repeatable": false
+    },
+    "grid_column_4": {
+      "type": "component",
+      "component": "grid.grid-column-4",
+      "repeatable": false
     }
   },
   "config": {}

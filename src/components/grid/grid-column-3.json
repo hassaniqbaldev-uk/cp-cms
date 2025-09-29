@@ -8,10 +8,8 @@
     "label": {
       "type": "string"
     },
-    "images": {
-      "type": "media",
-      "multiple": true,
-      "allowedTypes": ["images", "files", "videos", "audios"]
+    "text": {
+      "type": "string"
     }
   },
   "config": {}
