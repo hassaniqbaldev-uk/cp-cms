@@ -5,6 +5,9 @@
   },
   "options": {},
   "attributes": {
+    "title_1": {
+      "type": "string"
+    },
     "title_2": {
       "type": "string"
     }

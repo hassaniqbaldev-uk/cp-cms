@@ -5,6 +5,9 @@
   },
   "options": {},
   "attributes": {
+    "description_1": {
+      "type": "text"
+    },
     "description_2": {
       "type": "text"
     }
