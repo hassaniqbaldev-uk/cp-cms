@@ -69,6 +69,16 @@
       "type": "media",
       "multiple": false,
       "allowedTypes": ["images", "files", "videos", "audios"]
+    },
+    "image_column_12": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "files", "videos", "audios"]
+    },
+    "image_column_13": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "files", "videos", "audios"]
     }
   },
   "config": {}
