@@ -1,0 +1,4 @@
+[2025-10-01 18:01:42.805] error: [ERROR] WebSocket is not open: readyState 3 (CLOSED)
+[2025-10-01 18:01:42.826] error: [ERROR] WebSocket is not open: readyState 3 (CLOSED)
+[2025-10-01 18:01:42.854] error: [ERROR] WebSocket is not open: readyState 3 (CLOSED)
+[2025-10-01 18:01:42.867] error: [FATAL] WebSocket is not open: readyState 3 (CLOSED)
