@@ -55,6 +55,11 @@
         "grid.grid-card-row",
         "grid.grid-card-row-2"
       ]
+    },
+    "seo": {
+      "type": "component",
+      "component": "seo.seo-meta",
+      "repeatable": false
     }
   }
 }

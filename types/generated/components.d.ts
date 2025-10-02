@@ -18,6 +18,10 @@ export interface DescriptionContentDescription extends Struct.ComponentSchema {
   attributes: {
     description_1: Schema.Attribute.Text;
     description_2: Schema.Attribute.Text;
+    description_3: Schema.Attribute.Text;
+    description_4: Schema.Attribute.Text;
+    description_5: Schema.Attribute.Text;
+    description_6: Schema.Attribute.Text;
   };
 }
 
@@ -138,6 +142,17 @@ export interface GridGridColumn4 extends Struct.ComponentSchema {
   };
 }
 
+export interface GridGridColumn5 extends Struct.ComponentSchema {
+  collectionName: 'components_grid_grid_column_5s';
+  info: {
+    displayName: 'grid_column_5';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    text: Schema.Attribute.String;
+  };
+}
+
 export interface GridGridInnerCard extends Struct.ComponentSchema {
   collectionName: 'components_grid_grid_inner_cards';
   info: {
@@ -157,7 +172,6 @@ export interface GridGridRow extends Struct.ComponentSchema {
   attributes: {
     grid_column_1: Schema.Attribute.Component<'grid.grid-column-1', false>;
     grid_column_2: Schema.Attribute.Component<'grid.grid-column-2', false>;
-    grid_column_3: Schema.Attribute.Component<'grid.grid-column-3', false>;
     grid_column_4: Schema.Attribute.Component<'grid.grid-column-4', false>;
   };
 }
@@ -171,6 +185,7 @@ export interface GridGridRow2 extends Struct.ComponentSchema {
     grid_column_1: Schema.Attribute.Component<'grid.grid-column-1', false>;
     grid_column_2: Schema.Attribute.Component<'grid.grid-column-2', false>;
     grid_column_3: Schema.Attribute.Component<'grid.grid-column-3', false>;
+    grid_column_5: Schema.Attribute.Component<'grid.grid-column-5', false>;
   };
 }
 
@@ -182,6 +197,12 @@ export interface HeadingContentTitle extends Struct.ComponentSchema {
   attributes: {
     title_1: Schema.Attribute.String;
     title_2: Schema.Attribute.String;
+    title_3: Schema.Attribute.String;
+    title_4: Schema.Attribute.String;
+    title_5: Schema.Attribute.String;
+    title_6: Schema.Attribute.String;
+    title_7: Schema.Attribute.String;
+    title_8: Schema.Attribute.String;
   };
 }
 
@@ -228,6 +249,24 @@ export interface MediaImageGallery extends Struct.ComponentSchema {
     image_column_1: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
+    image_column_10: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    image_column_11: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    image_column_12: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    image_column_13: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    image_column_14: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    image_column_15: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     image_column_2: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
@@ -240,9 +279,33 @@ export interface MediaImageGallery extends Struct.ComponentSchema {
     image_column_5: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
+    image_column_6: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    image_column_7: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    image_column_8: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    image_column_9: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     main_image: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
+  };
+}
+
+export interface SeoSeoMeta extends Struct.ComponentSchema {
+  collectionName: 'components_seo_seo_metas';
+  info: {
+    displayName: 'seo meta';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    keywords: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -261,6 +324,7 @@ declare module '@strapi/strapi' {
       'grid.grid-column-2': GridGridColumn2;
       'grid.grid-column-3': GridGridColumn3;
       'grid.grid-column-4': GridGridColumn4;
+      'grid.grid-column-5': GridGridColumn5;
       'grid.grid-inner-card': GridGridInnerCard;
       'grid.grid-row': GridGridRow;
       'grid.grid-row-2': GridGridRow2;
@@ -269,6 +333,7 @@ declare module '@strapi/strapi' {
       'list.list-item': ListListItem;
       'list.workflow-list': ListWorkflowList;
       'media.image-gallery': MediaImageGallery;
+      'seo.seo-meta': SeoSeoMeta;
     }
   }
 }
