@@ -26,7 +26,7 @@ export interface CaseStudyDetailsCaseStudyChallengeSection
     displayName: 'CaseStudyChallengeSection';
   };
   attributes: {
-    Description: Schema.Attribute.String;
+    Description: Schema.Attribute.Text;
     GridImage1: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;

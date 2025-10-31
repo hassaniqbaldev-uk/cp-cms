@@ -1,0 +1,6 @@
+[2025-10-31 18:40:42.207] error: [ERROR] insert into "public"."components_case_study_details_case_study_challenge02330" ("description", "title") values ($1, $2) returning "id" - value too long for type character varying(255)
+[2025-10-31 18:41:12.228] error: [FATAL] [Data transfer] Error in assets read stream: WebSocket is not open: readyState 3 (CLOSED)
+[2025-10-31 18:41:12.229] error: [ERROR] WebSocket is not open: readyState 3 (CLOSED)
+[2025-10-31 18:41:12.242] error: [ERROR] WebSocket is not open: readyState 3 (CLOSED)
+[2025-10-31 18:41:12.254] error: [ERROR] WebSocket is not open: readyState 3 (CLOSED)
+[2025-10-31 18:41:12.260] error: [FATAL] WebSocket is not open: readyState 3 (CLOSED)

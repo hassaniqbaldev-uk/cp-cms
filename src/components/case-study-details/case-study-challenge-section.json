@@ -39,7 +39,7 @@
       "type": "string"
     },
     "Description": {
-      "type": "string"
+      "type": "text"
     },
     "Lists": {
       "type": "component",
