@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_case_study_details_results_columns",
+  "info": {
+    "displayName": "ResultsColumn"
+  },
+  "options": {},
+  "attributes": {
+    "Label1": {
+      "type": "string"
+    },
+    "Label2": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

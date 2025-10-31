@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_case_study_details_case_study_seos",
+  "info": {
+    "displayName": "CaseStudySeo"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Keywords": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

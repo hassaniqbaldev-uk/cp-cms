@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_case_study_details_lists",
+  "info": {
+    "displayName": "Lists"
+  },
+  "options": {},
+  "attributes": {
+    "List": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

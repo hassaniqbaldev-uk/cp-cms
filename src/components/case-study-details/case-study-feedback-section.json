@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_case_study_details_case_study_feedback_sections",
+  "info": {
+    "displayName": "CaseStudyFeedbackSection"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "FeedbackMessage": {
+      "type": "text"
+    },
+    "ClientDetails": {
+      "type": "component",
+      "component": "case-study-details.client-details",
+      "repeatable": false
+    },
+    "ProjectImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

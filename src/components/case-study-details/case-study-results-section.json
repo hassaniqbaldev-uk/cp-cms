@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_case_study_details_case_study_results_sections",
+  "info": {
+    "displayName": "CaseStudyResultsSection"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Column1": {
+      "type": "component",
+      "component": "case-study-details.results-column",
+      "repeatable": false
+    },
+    "Column2": {
+      "type": "component",
+      "component": "case-study-details.results-column",
+      "repeatable": false
+    },
+    "Column3": {
+      "type": "component",
+      "component": "case-study-details.results-column",
+      "repeatable": false
+    },
+    "Column4": {
+      "type": "component",
+      "component": "case-study-details.results-column",
+      "repeatable": false
+    },
+    "MainImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

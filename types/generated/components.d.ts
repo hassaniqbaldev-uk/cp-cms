@@ -1,339 +1,236 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
-export interface ButtonLinkButton extends Struct.ComponentSchema {
-  collectionName: 'components_button_link_buttons';
+export interface CaseStudyDetailsCaseStudyApproachSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_details_case_study_approach_sections';
   info: {
-    displayName: 'link_button';
+    displayName: 'CaseStudyApproachSection';
   };
   attributes: {
-    label: Schema.Attribute.String;
+    CardImage1: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    CardImage2: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    Description: Schema.Attribute.Text;
+    Lists: Schema.Attribute.Component<'case-study-details.lists', true>;
+    Title: Schema.Attribute.String;
   };
 }
 
-export interface DescriptionContentDescription extends Struct.ComponentSchema {
-  collectionName: 'components_description_content_descriptions';
+export interface CaseStudyDetailsCaseStudyChallengeSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_details_case_study_challenge_sections';
   info: {
-    displayName: 'content_description';
+    displayName: 'CaseStudyChallengeSection';
   };
   attributes: {
-    description_1: Schema.Attribute.Text;
-    description_2: Schema.Attribute.Text;
-    description_3: Schema.Attribute.Text;
-    description_4: Schema.Attribute.Text;
-    description_5: Schema.Attribute.Text;
-    description_6: Schema.Attribute.Text;
+    Description: Schema.Attribute.String;
+    GridImage1: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    GridImage2: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    GridImage3: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    Lists: Schema.Attribute.Component<'case-study-details.lists', true>;
+    Title: Schema.Attribute.String;
   };
 }
 
-export interface GridGridCard1 extends Struct.ComponentSchema {
-  collectionName: 'components_grid_grid_card_1s';
+export interface CaseStudyDetailsCaseStudyFeedbackSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_details_case_study_feedback_sections';
   info: {
-    displayName: 'grid_card_1';
+    displayName: 'CaseStudyFeedbackSection';
   };
   attributes: {
-    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    label: Schema.Attribute.String;
-  };
-}
-
-export interface GridGridCard2 extends Struct.ComponentSchema {
-  collectionName: 'components_grid_grid_card_2s';
-  info: {
-    displayName: 'grid_card_2';
-  };
-  attributes: {
-    grid_inner_card: Schema.Attribute.Component<'grid.grid-inner-card', true>;
-  };
-}
-
-export interface GridGridCardColumn1 extends Struct.ComponentSchema {
-  collectionName: 'components_grid_grid_card_column_1s';
-  info: {
-    displayName: 'grid_card_column_1';
-  };
-  attributes: {
-    title: Schema.Attribute.String;
-    workflow_list: Schema.Attribute.Component<'list.workflow-list', false>;
-  };
-}
-
-export interface GridGridCardColumn2 extends Struct.ComponentSchema {
-  collectionName: 'components_grid_grid_card_column_2s';
-  info: {
-    displayName: 'grid_card_column_2';
-  };
-  attributes: {
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-  };
-}
-
-export interface GridGridCardRow extends Struct.ComponentSchema {
-  collectionName: 'components_grid_grid_card_rows';
-  info: {
-    displayName: 'grid_card_row';
-  };
-  attributes: {
-    grid_card_1: Schema.Attribute.Component<'grid.grid-card-1', false>;
-    grid_card_2: Schema.Attribute.Component<'grid.grid-card-2', false>;
-  };
-}
-
-export interface GridGridCardRow2 extends Struct.ComponentSchema {
-  collectionName: 'components_grid_grid_card_row_2s';
-  info: {
-    displayName: 'grid_card_row_2';
-  };
-  attributes: {
-    grid_card_column_1: Schema.Attribute.Component<
-      'grid.grid-card-column-1',
+    ClientDetails: Schema.Attribute.Component<
+      'case-study-details.client-details',
       false
     >;
-    grid_card_column_2: Schema.Attribute.Component<
-      'grid.grid-card-column-2',
-      false
+    FeedbackMessage: Schema.Attribute.Text;
+    ProjectImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
     >;
+    Title: Schema.Attribute.String;
   };
 }
 
-export interface GridGridColumn1 extends Struct.ComponentSchema {
-  collectionName: 'components_grid_grid_column_1s';
+export interface CaseStudyDetailsCaseStudyHeroSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_details_case_study_hero_sections';
   info: {
-    displayName: 'grid_column_1';
+    displayName: 'CaseStudyHeroSection';
   };
   attributes: {
-    label: Schema.Attribute.String;
-    text: Schema.Attribute.String;
-  };
-}
-
-export interface GridGridColumn2 extends Struct.ComponentSchema {
-  collectionName: 'components_grid_grid_column_2s';
-  info: {
-    displayName: 'grid_column_2';
-  };
-  attributes: {
-    label: Schema.Attribute.String;
-    text: Schema.Attribute.String;
-  };
-}
-
-export interface GridGridColumn3 extends Struct.ComponentSchema {
-  collectionName: 'components_grid_grid_column_3s';
-  info: {
-    displayName: 'grid_column_3';
-  };
-  attributes: {
-    label: Schema.Attribute.String;
-    text: Schema.Attribute.String;
-  };
-}
-
-export interface GridGridColumn4 extends Struct.ComponentSchema {
-  collectionName: 'components_grid_grid_column_4s';
-  info: {
-    displayName: 'grid_column_4';
-  };
-  attributes: {
-    images: Schema.Attribute.Media<
+    BadgeImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    FeaturedImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    IndustryColumn: Schema.Attribute.String;
+    ServicesColumn: Schema.Attribute.String;
+    ToolsColumn: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
-    label: Schema.Attribute.String;
+    VisitButtonLink: Schema.Attribute.String;
   };
 }
 
-export interface GridGridColumn5 extends Struct.ComponentSchema {
-  collectionName: 'components_grid_grid_column_5s';
+export interface CaseStudyDetailsCaseStudyOverviewSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_details_case_study_overview_sections';
   info: {
-    displayName: 'grid_column_5';
+    displayName: 'CaseStudyOverviewSection';
   };
   attributes: {
-    label: Schema.Attribute.String;
-    text: Schema.Attribute.String;
+    Description: Schema.Attribute.Text;
+    GridImage1: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    GridImage2: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    Title: Schema.Attribute.String;
   };
 }
 
-export interface GridGridInnerCard extends Struct.ComponentSchema {
-  collectionName: 'components_grid_grid_inner_cards';
+export interface CaseStudyDetailsCaseStudyResultsSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_details_case_study_results_sections';
   info: {
-    displayName: 'grid_inner_card';
+    displayName: 'CaseStudyResultsSection';
   };
   attributes: {
-    label_list: Schema.Attribute.Component<'list.label-list', true>;
-    title: Schema.Attribute.String;
+    Column1: Schema.Attribute.Component<
+      'case-study-details.results-column',
+      false
+    >;
+    Column2: Schema.Attribute.Component<
+      'case-study-details.results-column',
+      false
+    >;
+    Column3: Schema.Attribute.Component<
+      'case-study-details.results-column',
+      false
+    >;
+    Column4: Schema.Attribute.Component<
+      'case-study-details.results-column',
+      false
+    >;
+    Description: Schema.Attribute.Text;
+    MainImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Title: Schema.Attribute.String;
   };
 }
 
-export interface GridGridRow extends Struct.ComponentSchema {
-  collectionName: 'components_grid_grid_rows';
+export interface CaseStudyDetailsCaseStudySeo extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_details_case_study_seos';
   info: {
-    displayName: 'grid_row';
+    displayName: 'CaseStudySeo';
   };
   attributes: {
-    grid_column_1: Schema.Attribute.Component<'grid.grid-column-1', false>;
-    grid_column_2: Schema.Attribute.Component<'grid.grid-column-2', false>;
-    grid_column_4: Schema.Attribute.Component<'grid.grid-column-4', false>;
+    Description: Schema.Attribute.Text;
+    Keywords: Schema.Attribute.Text;
+    Title: Schema.Attribute.String;
   };
 }
 
-export interface GridGridRow2 extends Struct.ComponentSchema {
-  collectionName: 'components_grid_grid_row_2s';
+export interface CaseStudyDetailsCaseStudySolutionSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_details_case_study_solution_sections';
   info: {
-    displayName: 'grid_row_2';
+    displayName: 'CaseStudySolutionSection';
   };
   attributes: {
-    grid_column_1: Schema.Attribute.Component<'grid.grid-column-1', false>;
-    grid_column_2: Schema.Attribute.Component<'grid.grid-column-2', false>;
-    grid_column_3: Schema.Attribute.Component<'grid.grid-column-3', false>;
-    grid_column_5: Schema.Attribute.Component<'grid.grid-column-5', false>;
+    Description: Schema.Attribute.Text;
+    SliderImages: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    Title: Schema.Attribute.String;
   };
 }
 
-export interface HeadingContentTitle extends Struct.ComponentSchema {
-  collectionName: 'components_heading_content_titles';
+export interface CaseStudyDetailsClientDetails extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_details_client_details';
   info: {
-    displayName: 'content_title';
+    displayName: 'ClientDetails';
   };
   attributes: {
-    title_1: Schema.Attribute.String;
-    title_2: Schema.Attribute.String;
-    title_3: Schema.Attribute.String;
-    title_4: Schema.Attribute.String;
-    title_5: Schema.Attribute.String;
-    title_6: Schema.Attribute.String;
-    title_7: Schema.Attribute.String;
-    title_8: Schema.Attribute.String;
+    AvatarImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    ClientName: Schema.Attribute.String;
+    ProjectType: Schema.Attribute.String;
   };
 }
 
-export interface ListLabelList extends Struct.ComponentSchema {
-  collectionName: 'components_list_label_lists';
+export interface CaseStudyDetailsLists extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_details_lists';
   info: {
-    displayName: 'label_list';
+    displayName: 'Lists';
   };
   attributes: {
-    label: Schema.Attribute.String;
+    List: Schema.Attribute.String;
   };
 }
 
-export interface ListListItem extends Struct.ComponentSchema {
-  collectionName: 'components_list_list_items';
+export interface CaseStudyDetailsResultsColumn extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_details_results_columns';
   info: {
-    displayName: 'list_item';
+    displayName: 'ResultsColumn';
   };
   attributes: {
-    label_1: Schema.Attribute.String;
-    label_2: Schema.Attribute.String;
+    Label1: Schema.Attribute.String;
+    Label2: Schema.Attribute.String;
   };
 }
 
-export interface ListWorkflowList extends Struct.ComponentSchema {
-  collectionName: 'components_list_workflow_lists';
+export interface CaseStudyTags extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_tags';
   info: {
-    displayName: 'workflow_list';
+    displayName: 'Tags';
   };
   attributes: {
-    list_item: Schema.Attribute.Component<'list.list-item', true>;
+    Tag: Schema.Attribute.String;
   };
 }
 
-export interface MediaImageGallery extends Struct.ComponentSchema {
-  collectionName: 'components_media_image_galleries';
+export interface CaseStudyTechnologies extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_technologies';
   info: {
-    displayName: 'image_gallery';
+    displayName: 'Technologies';
   };
   attributes: {
-    badge_image: Schema.Attribute.Media<
+    Technology: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
-    image_column_1: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    image_column_10: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    image_column_11: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    image_column_12: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    image_column_13: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    image_column_14: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    image_column_15: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    image_column_2: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    image_column_3: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    image_column_4: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    image_column_5: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    image_column_6: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    image_column_7: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    image_column_8: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    image_column_9: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    main_image: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-  };
-}
-
-export interface SeoSeoMeta extends Struct.ComponentSchema {
-  collectionName: 'components_seo_seo_metas';
-  info: {
-    displayName: 'seo meta';
-  };
-  attributes: {
-    description: Schema.Attribute.Text;
-    keywords: Schema.Attribute.Text;
-    title: Schema.Attribute.String;
   };
 }
 
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'button.link-button': ButtonLinkButton;
-      'description.content-description': DescriptionContentDescription;
-      'grid.grid-card-1': GridGridCard1;
-      'grid.grid-card-2': GridGridCard2;
-      'grid.grid-card-column-1': GridGridCardColumn1;
-      'grid.grid-card-column-2': GridGridCardColumn2;
-      'grid.grid-card-row': GridGridCardRow;
-      'grid.grid-card-row-2': GridGridCardRow2;
-      'grid.grid-column-1': GridGridColumn1;
-      'grid.grid-column-2': GridGridColumn2;
-      'grid.grid-column-3': GridGridColumn3;
-      'grid.grid-column-4': GridGridColumn4;
-      'grid.grid-column-5': GridGridColumn5;
-      'grid.grid-inner-card': GridGridInnerCard;
-      'grid.grid-row': GridGridRow;
-      'grid.grid-row-2': GridGridRow2;
-      'heading.content-title': HeadingContentTitle;
-      'list.label-list': ListLabelList;
-      'list.list-item': ListListItem;
-      'list.workflow-list': ListWorkflowList;
-      'media.image-gallery': MediaImageGallery;
-      'seo.seo-meta': SeoSeoMeta;
+      'case-study-details.case-study-approach-section': CaseStudyDetailsCaseStudyApproachSection;
+      'case-study-details.case-study-challenge-section': CaseStudyDetailsCaseStudyChallengeSection;
+      'case-study-details.case-study-feedback-section': CaseStudyDetailsCaseStudyFeedbackSection;
+      'case-study-details.case-study-hero-section': CaseStudyDetailsCaseStudyHeroSection;
+      'case-study-details.case-study-overview-section': CaseStudyDetailsCaseStudyOverviewSection;
+      'case-study-details.case-study-results-section': CaseStudyDetailsCaseStudyResultsSection;
+      'case-study-details.case-study-seo': CaseStudyDetailsCaseStudySeo;
+      'case-study-details.case-study-solution-section': CaseStudyDetailsCaseStudySolutionSection;
+      'case-study-details.client-details': CaseStudyDetailsClientDetails;
+      'case-study-details.lists': CaseStudyDetailsLists;
+      'case-study-details.results-column': CaseStudyDetailsResultsColumn;
+      'case-study.tags': CaseStudyTags;
+      'case-study.technologies': CaseStudyTechnologies;
     }
   }
 }

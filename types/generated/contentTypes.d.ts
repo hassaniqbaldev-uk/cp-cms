@@ -384,102 +384,36 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    detail_content: Schema.Attribute.DynamicZone<
+    CaseStudyDetails: Schema.Attribute.DynamicZone<
       [
-        'media.image-gallery',
-        'button.link-button',
-        'grid.grid-row',
-        'heading.content-title',
-        'description.content-description',
-        'grid.grid-row-2',
-        'grid.grid-card-row',
-        'grid.grid-card-row-2',
+        'case-study-details.case-study-hero-section',
+        'case-study-details.case-study-overview-section',
+        'case-study-details.case-study-challenge-section',
+        'case-study-details.case-study-approach-section',
+        'case-study-details.case-study-solution-section',
+        'case-study-details.case-study-results-section',
+        'case-study-details.case-study-feedback-section',
+        'case-study-details.case-study-seo',
       ]
     >;
-    excerpt: Schema.Attribute.String;
-    hero_image: Schema.Attribute.Media<
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::case-study.case-study'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    ShortDescription: Schema.Attribute.String;
+    Slug: Schema.Attribute.UID<'Title'>;
+    Tags: Schema.Attribute.Component<'case-study.tags', true>;
+    Technologies: Schema.Attribute.Component<'case-study.technologies', true>;
+    ThumbnailImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::case-study.case-study'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    seo: Schema.Attribute.Component<'seo.seo-meta', false>;
-    slug: Schema.Attribute.UID<'title'>;
-    tags: Schema.Attribute.Relation<'manyToMany', 'api::tag.tag'>;
-    technologies: Schema.Attribute.Relation<
-      'manyToMany',
-      'api::technology.technology'
-    >;
-    title: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiTagTag extends Struct.CollectionTypeSchema {
-  collectionName: 'tags';
-  info: {
-    displayName: 'Tag';
-    pluralName: 'tags';
-    singularName: 'tag';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    case_studies: Schema.Attribute.Relation<
-      'manyToMany',
-      'api::case-study.case-study'
-    >;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::tag.tag'> &
-      Schema.Attribute.Private;
-    name: Schema.Attribute.String;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiTechnologyTechnology extends Struct.CollectionTypeSchema {
-  collectionName: 'technologies';
-  info: {
-    displayName: 'Technology';
-    pluralName: 'technologies';
-    singularName: 'technology';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    case_studies: Schema.Attribute.Relation<
-      'manyToMany',
-      'api::case-study.case-study'
-    >;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::technology.technology'
-    > &
-      Schema.Attribute.Private;
-    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    name: Schema.Attribute.String;
-    publishedAt: Schema.Attribute.DateTime;
+    Title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -996,8 +930,6 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::case-study.case-study': ApiCaseStudyCaseStudy;
-      'api::tag.tag': ApiTagTag;
-      'api::technology.technology': ApiTechnologyTechnology;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

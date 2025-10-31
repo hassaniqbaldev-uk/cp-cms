@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_case_study_details_case_study_hero_sections",
+  "info": {
+    "displayName": "CaseStudyHeroSection"
+  },
+  "options": {},
+  "attributes": {
+    "VisitButtonLink": {
+      "type": "string"
+    },
+    "IndustryColumn": {
+      "type": "string"
+    },
+    "ServicesColumn": {
+      "type": "string"
+    },
+    "ToolsColumn": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "BadgeImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "FeaturedImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

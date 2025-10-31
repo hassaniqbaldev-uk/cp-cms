@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_case_study_details_case_study_solution_sections",
+  "info": {
+    "displayName": "CaseStudySolutionSection"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "SliderImages": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

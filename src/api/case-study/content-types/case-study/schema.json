@@ -11,17 +11,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
-      "type": "string"
-    },
-    "slug": {
-      "type": "uid",
-      "targetField": "title"
-    },
-    "excerpt": {
-      "type": "string"
-    },
-    "hero_image": {
+    "ThumbnailImage": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
@@ -31,35 +21,38 @@
         "audios"
       ]
     },
-    "technologies": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::technology.technology",
-      "inversedBy": "case_studies"
+    "Tags": {
+      "type": "component",
+      "component": "case-study.tags",
+      "repeatable": true
     },
-    "tags": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::tag.tag",
-      "inversedBy": "case_studies"
+    "Slug": {
+      "type": "uid",
+      "targetField": "Title"
     },
-    "detail_content": {
+    "Title": {
+      "type": "string"
+    },
+    "ShortDescription": {
+      "type": "string"
+    },
+    "Technologies": {
+      "type": "component",
+      "component": "case-study.technologies",
+      "repeatable": true
+    },
+    "CaseStudyDetails": {
       "type": "dynamiczone",
       "components": [
-        "media.image-gallery",
-        "button.link-button",
-        "grid.grid-row",
-        "heading.content-title",
-        "description.content-description",
-        "grid.grid-row-2",
-        "grid.grid-card-row",
-        "grid.grid-card-row-2"
+        "case-study-details.case-study-hero-section",
+        "case-study-details.case-study-overview-section",
+        "case-study-details.case-study-challenge-section",
+        "case-study-details.case-study-approach-section",
+        "case-study-details.case-study-solution-section",
+        "case-study-details.case-study-results-section",
+        "case-study-details.case-study-feedback-section",
+        "case-study-details.case-study-seo"
       ]
-    },
-    "seo": {
-      "type": "component",
-      "component": "seo.seo-meta",
-      "repeatable": false
     }
   }
 }

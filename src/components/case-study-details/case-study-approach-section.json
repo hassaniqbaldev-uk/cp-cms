@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_case_study_details_case_study_approach_sections",
+  "info": {
+    "displayName": "CaseStudyApproachSection"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Lists": {
+      "type": "component",
+      "component": "case-study-details.lists",
+      "repeatable": true
+    },
+    "CardImage1": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "CardImage2": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}
