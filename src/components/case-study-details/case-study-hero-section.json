@@ -14,16 +14,6 @@
     "ServicesColumn": {
       "type": "string"
     },
-    "ToolsColumn": {
-      "type": "media",
-      "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "BadgeImage": {
       "type": "media",
       "multiple": false,

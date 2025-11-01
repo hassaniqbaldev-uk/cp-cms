@@ -36,10 +36,15 @@
     "ShortDescription": {
       "type": "string"
     },
-    "Technologies": {
-      "type": "component",
-      "component": "case-study.technologies",
-      "repeatable": true
+    "Tools": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "CaseStudyDetails": {
       "type": "dynamiczone",

@@ -75,10 +75,6 @@ export interface CaseStudyDetailsCaseStudyHeroSection
     >;
     IndustryColumn: Schema.Attribute.String;
     ServicesColumn: Schema.Attribute.String;
-    ToolsColumn: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
     VisitButtonLink: Schema.Attribute.String;
   };
 }

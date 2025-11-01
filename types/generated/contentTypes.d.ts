@@ -409,11 +409,14 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
     ShortDescription: Schema.Attribute.String;
     Slug: Schema.Attribute.UID<'Title'>;
     Tags: Schema.Attribute.Component<'case-study.tags', true>;
-    Technologies: Schema.Attribute.Component<'case-study.technologies', true>;
     ThumbnailImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
     Title: Schema.Attribute.String;
+    Tools: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
